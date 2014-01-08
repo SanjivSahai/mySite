@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+    <title>My Photos Site  
+    <link rel="stylesheet" href="css/default.css" />  
+    <link rel="stylesheet" href="css/jquery.lightbox-0.5.css" />  
+      
+    <script src="js/jquery-1.2.6.pack.js" type="text/javascript">  
+    <script src="js/jquery.lightbox-0.5.pack.js" type="text/javascript">  
+    <script src="js/scripts.js" type="text/javascript">  
+</head>  
+    
+    <body>
+      <div id="container">
+        <h2>Insert Item</h2>
+
+        <form method="post">
+        	<label>
+        		<div>Item Title</div>
+        		<input type="text" name="title" style="height: 30px; width: 160px;">
+        	</label>
+        	<label>
+        		<div>Description</div>
+        		<textarea name="item"></textarea>
+        	</label>
+            <br>
+            <input type="submit">
+        </form>
+
+        {% if img_url %}
+          <img class="map" src="{{img_url}}">
+        {% endif %}
+          <hr>
+              <ul id='Item list'>
+              {% for item in items %}
+              <div class="item">
+                <li>
+                  <div class="item-title">{{item.title}}</div>
+                  <img class="item-map" src="{{img_url}}">
+                  <pre class="item-body">{{item.item}}</pre>
+                  <hr>
+                </li>
+              </div>
+              {% endfor %}
+              </ul>  
+        </div>  <!-- end of container -->
+    </body>
+</html>

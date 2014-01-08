@@ -1,0 +1,129 @@
+body
+{
+	background: #6F6F6F;
+	font-family: helvetica, arial;
+	color: #BFBFBF;
+}
+#container
+{
+	position: relative;
+width: 1000px;
+	margin: 0 auto;
+}
+
+a img
+{
+	border: none;
+}
+
+#main {
+background: #3F3F3F;
+overflow: hidden;
+padding: 1em 1em 2em 1em;
+border: 1px solid #4F4F4F;
+-moz-border-radius-topright: 35px;
+-moz-border-radius-bottomright: 35px;
+-webkit-border-top-right-radius: 35px;
+-webkit-border-bottom-right-radius: 35px;
+}
+
+#container h1
+{
+	margin: 0 0 .5em 0;
+	color: #292929;
+}
+
+a#logout {
+right: 2.5em;
+position: absolute;
+top: 2.4em;
+
+text-decoration: none;
+color: #e3e3e3;
+}
+
+h1 small {
+font-size: .5em;
+position: relative;
+top: -5px;
+color: #3F3F3F;
+
+}
+
+#main h4
+{
+	margin: 0;
+	font-weight: normal;
+position: relative;
+top: -37px;
+left: 1em;
+text-align: left;
+color: #292929;
+width: 175px;
+cursor: pointer;
+}
+
+#main input {
+position: relative;
+top: -37px;
+left: 1.3em;
+display: none;
+
+}
+
+ul
+{
+	margin: 0 auto;
+	padding: 0;
+overflow: hidden;
+text-align: center;
+}
+
+ul li
+{
+width: 225px; height: 280px;
+	list-style: none;
+	float: left;
+	padding: .5em;
+	
+	overflow: hidden;
+}
+
+ul li img 
+{
+	cursor: pointer;
+background: #e3e3e3;
+width: 225px; 
+height: 225px;
+background-position:center;
+padding: .2em .2em 3em .2em;
+}
+
+
+.hidden
+{
+	display: none;
+}
+
+#response
+{
+	position: relative;
+	clear: both;
+	background: #e3e3e3;
+	padding: 1.5em;
+	color: #292929;
+	border: 1px solid #BFBFBF;
+}
+
+span#x
+{
+	font-weight: bold;
+	font-size: .9em;
+	color: #292929;
+	position: absolute;
+background: gray;
+padding: .1em;
+cursor: pointer;
+	top: 0;
+	right: 0;
+}

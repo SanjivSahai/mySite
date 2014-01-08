@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>  
+    <title>ShopOn</title> 
+    <link rel="stylesheet" href="css\default.css" />  
+    <link rel="stylesheet" href="css\jquery.lightbox-0.5.css" />  
+      
+    <script src="js\jquery-1.2.6.pack.js" type="text/javascript">  </script>
+    <script src="js\jquery.lightbox-0.5.pack.js" type="text/javascript">  </script>
+    <script src="js\scripts.js" type="text/javascript">  </script>
+</head>  
+    
+    <body>
+     <form method="post">
+       <TABLE BORDER="0"    WIDTH="50%"   CELLPADDING="4" CELLSPACING="3">
+        <TR>
+            <TH COLSPAN="2"><BR><H3>My Product Details</H3>
+            </TH>
+        </TR>
+        <ul class="nopad1">
+        <TR>
+                <td ALIGN="RIGHT"><label for="name">Product Name: </label></td>
+                <td><input id="name" name="name" /></td>
+        </TR>      
+        <TR>
+                <td ALIGN="RIGHT"><label for="description">Listing Description: </label></td>
+                <td><textarea id="description" name="description" > Ths is a text default</textarea></td>
+        </TR>      
+        <TR>
+                <td ALIGN="RIGHT"><label for="enabled">Check if Enabled? : </label></td>
+                <td><input type="checkbox" name = "enabled" id = "css"> 
+                </td>   
+        </TR>      
+        <TR>
+                <td ALIGN="RIGHT">Product Image:
+                </td>
+                <td><img src="#" alt="Select an image..." width="128" height="128" />
+                  <BR>
+                    <input type='file' name='browse' onchange='Test.UpdatePreview(this)'  />
+                </td>
+        </TR>      
+        <TR>        
+                <td ></td>
+                <td ><input type="submit" ALIGN="CENTER" value = "submit"> </td>   
+        </TR>
+        </ui>
+     </form>
+      <div id="container">
+           <h1>Products <small>click on the text to change the title.</small></h1>  
+           <div id="main">  
+              <ul id='photos'>
+                {% for item in products %}
+                  <li><a title='{{item.name}}' href='images\{{item.imgURL[0]}}'><img src='images\{{item.imgURL[0]}}' id='id' alt='{{item.name}}' /> </a>
+                    <h4>{{item.name}}</h4> 
+                  <input type='text' name='itemsname' value='{{item.name}}' /></li>
+                {% endfor %}
+              </ul>
+              <div id="response" class="hidden" >  </div>
+            </div> <!-- end of main -->
+      </div>  <!-- end of container -->
+      <hr>
+    </body>
+</html>
